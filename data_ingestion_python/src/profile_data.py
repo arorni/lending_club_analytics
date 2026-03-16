@@ -4,8 +4,6 @@ import logging
 from pathlib import Path
 import pandas as pd
 
-
-from src.features import ACCEPTED_PROFILE_COLUMNS, REJECTED_PROFILE_COLUMNS
 from src.config import get_settings
 
 settings = get_settings()

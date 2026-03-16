@@ -2,10 +2,8 @@ from __future__ import annotations
 
 import logging
 import time
-from pathlib import Path
 
 from src.config import get_settings
-from src.load_postgres import settings
 
 
 def setup_logger(logger_name: str, log_file_name: str):

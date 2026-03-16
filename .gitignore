@@ -1,11 +1,13 @@
 data/raw/*
 data/archives/*
 logs/*
-
-.env
+data/
+data_ingestion_python/.env
 venv
 
 __pycache__/
 *.pyc
-
+*.gz
+*.zip
+*.csv
 .idea/
