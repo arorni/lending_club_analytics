@@ -1,0 +1,5 @@
+CREATE SCHEMA IF NOT EXISTS raw;
+Below schema and tables have been created and populated by python data ingestion script.
+1)Raw schema 
+2)accepted_loans_raw
+3)rejected_loans_raw
