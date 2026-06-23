@@ -112,6 +112,8 @@ SELECT COUNT(*) FROM raw.accepted_loans_raw;
 
 SELECT COUNT(*) FROM clean.accepted_loans_cleaned;
 
+/* There will be a difference of 32 records from raw table (Records with invalid ID have been skipped */
+
 /*Verifying the presence of duplicate id in the clean table */
 SELECT COUNT(*) - COUNT(DISTINCT id) AS duplicate_ids
 FROM clean.accepted_loans_cleaned;
