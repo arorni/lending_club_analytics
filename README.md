@@ -106,7 +106,7 @@ lending_club_analytics/
 │   ├── schema/
 │   └── analysis/
 │
-├── powerbi_dashboards/
+└──  powerbi_dashboards/
 ```
 
 ---
