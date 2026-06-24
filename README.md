@@ -102,7 +102,7 @@ lending_club_analytics/
 │
 ├── data_ingestion_python/
 │
-├── sql/
+├── SQL Analysis/
 │   ├── schema/
 │   └── analysis/
 │
