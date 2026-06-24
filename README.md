@@ -1,111 +1,127 @@
 # Lending Club Analytics Project
-End-to-End Lending Analytics Pipeline (Python + PostgreSQL + Power BI + AI)
+
+**End-to-End Lending Analytics Pipeline (Python • PostgreSQL • Power BI • AI)**
 
 ## Project Overview
-This repository builds a complete analytics pipeline using the Lending Club loan dataset. 
 
-This project focuses on below:
+This repository demonstrates an end-to-end analytics pipeline built using the Lending Club loan dataset containing approximately **30 million loan applications**.
 
-- automated data ingestion
-- SQL-based analytics
-- business intelligence dashboards
-- AI-driven natural language querying
+The project covers the complete analytics workflow, from automated data ingestion and data preparation to business-focused SQL analysis, interactive Power BI dashboards, and a planned AI-powered natural language interface.
 
-The project is intentionally developed **in stages**, so each layer of the analytics stack can be built and documented independently.
+### Key Features
+
+* Automated data ingestion using Python
+* PostgreSQL Medallion architecture (Raw → Clean → Analytics)
+* Data cleaning and feature engineering
+* Business-focused SQL analysis
+* Interactive Power BI dashboards *(in progress)*
+* AI-powered Text-to-SQL interface *(planned)*
 
 ---
 
 ## Business Context
-Consumer lending platforms rely heavily on data to evaluate borrower profiles, understand loan demand, monitor portfolio performance, and identify potential risk signals.
 
-The Lending Club dataset contains approx. 2.76M of accepted and 27.6M of rejected loan applications. It has borrower attributes, loan characteristics, and loan performance metrics.
+Consumer lending platforms rely heavily on data to assess borrower risk, monitor portfolio performance, and understand lending demand.
 
-This project aims to support analysis of:
+Using approximately **2.26 million accepted loans** and **27.6 million rejected loan applications**, this project explores:
 
-- differences between accepted and rejected loan applications
-- borrower characteristics across loan segments
-- lending behavior trends over time
-- portfolio monitoring insights
+* Borrower characteristics associated with higher default risk
+* Lending portfolio performance over time
+* Geographic comparison of accepted and rejected loan applications
+* Business insights to support lending decisions
 
 ---
 
 ## Project Architecture
 
-Kaggle Lending Club Dataset  
-↓  
-Python Data Ingestion Pipeline  
-↓  
-PostgreSQL Database (raw → clean → analytics)  
-↓  
-SQL Analytical Queries  
-↓  
-Power BI Dashboards  
-↓  
-Future: AI Text‑to‑SQL Interface
+```
+Kaggle Lending Club Dataset
+            │
+            ▼
+ Python Data Ingestion Pipeline
+            │
+            ▼
+ PostgreSQL (Raw → Clean → Analytics)
+            │
+            ▼
+     SQL Business Analysis
+            │
+            ▼
+     Power BI Dashboards
+            │
+            ▼
+ Future: AI Text-to-SQL Interface
+```
 
 ---
 
 ## Project Stages
 
-### Stage 1 — Data Ingestion Pipeline (Python)
+### Stage 1 — Python Data Ingestion
 
-Builds a modular Python pipeline to ingest the Lending Club dataset into PostgreSQL.
+Builds a modular Python pipeline to ingest raw Lending Club data into PostgreSQL.
 
 Location:
 
+```
 data_ingestion_python/
-
-Detailed documentation:
-
-data_ingestion_python/README.md
+```
 
 ---
 
-### Stage 2 — PostgreSQL Analytics (Planned)
+### Stage 2 — PostgreSQL Analytics
 
-The second stage will analyze the dataset using SQL queries inside
-PostgreSQL.
+Implements a Medallion-style data model and answers business questions using SQL.
 
-The exact analytical questions will be added to this README after
-completing the SQL exploration phase.
+Business analyses include:
+
+* High-Risk Borrower Segments
+* Loan Portfolio Trend Analysis
+* Geographic Comparison of Accepted and Rejected Applications
+
+Location:
+
+```
+SQL Analysis/
+```
 
 ---
 
-### Stage 3 — Power BI Visualization (Planned)
+### Stage 3 — Power BI Dashboards *(In Progress)*
 
-SQL outputs will be transformed into interactive dashboards.
+Interactive dashboards will visualize key lending, portfolio, and borrower insights generated from the SQL analytics layer.
 
 ---
 
 ## Repository Structure
 
-```
+```text
 lending_club_analytics/
 │
-├── README.md                      # Project overview
+├── README.md
 │
-├── data_ingestion_python/         # Stage 1 – Python ingestion pipeline
-│   ├── README.md
-│   ├── src/
-│   └── requirements.txt
+├── data_ingestion_python/
 │
-├── sql_analytics/                 # Stage 2 – SQL analysis (planned)
+├── sql/
+│   ├── schema/
+│   └── analysis/
 │
-├── powerbi_dashboards/            # Stage 3 – BI dashboards (planned)
-│
-└── docs/                          # Architecture diagrams and notes
+├── powerbi_dashboards/
 ```
 
 ---
 
-## Dataset Source
+## Dataset
 
-Lending Club dataset available on Kaggle:
+**Source:** Lending Club Dataset (Kaggle)
 
 https://www.kaggle.com/datasets/wordsforthewise/lending-club
 
 ---
 
-## Project Status
+## Current Status
 
-Current Stage: **Stage 1 — Data Ingestion Pipeline**
+* ✅ Stage 1 — Python Data Ingestion
+* ✅ Stage 2 — PostgreSQL Analytics
+* 🚧 Stage 3 — Power BI Dashboards
+* 📌 Stage 4 — AI-powered Text-to-SQL Interface *(planned)*
